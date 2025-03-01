@@ -1,4 +1,4 @@
-menu "ESP LCD ST7735 configuration"
+menu "ESP LCD ST7735 configuration - neu"
     depends on BSP_DISPLAY_ENABLED && BSP_DISPLAY_DRIVER_ST7735
 
 config ESP_LCD_ST7735_RGB_ENDIAN
