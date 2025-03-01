@@ -10,6 +10,15 @@
 #include "esp_lcd_panel_commands.h"  // standard LCD command definitions (MADCTL, etc)
 #include "esp_lcd_st7735.h"
 
+#include "soc/soc_caps.h"
+#include "esp_lcd_types.h"
+
+
+#include <sys/cdefs.h>
+#include "esp_lcd_panel_vendor.h"
+
+
+
 static const char *TAG = "st7735";
 
 /* Internal structure for ST7735 panel state */

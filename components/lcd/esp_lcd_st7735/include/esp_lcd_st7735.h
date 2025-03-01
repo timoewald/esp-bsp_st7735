@@ -2,6 +2,11 @@
 #include "esp_lcd_panel_interface.h"
 #include "esp_lcd_panel_ops.h"
 
+#include "hal/lcd_types.h"
+#include "esp_lcd_panel_vendor.h"
+#include "esp_idf_version.h"
+
+
 /* ST7735 specific command definitions (if not already in esp_lcd_panel_commands.h) */
 #define ST7735_SWRESET   0x01  // Software Reset 
 #define ST7735_SLPOUT    0x11  // Sleep Out 
