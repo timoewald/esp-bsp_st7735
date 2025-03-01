@@ -621,6 +621,9 @@ menu "Board Support Package (generic)"
             config BSP_DISPLAY_DRIVER_GC9A01
                 depends on BSP_DISPLAY_INTERFACE_SPI
                 bool "GC9A01"
+            config BSP_DISPLAY_DRIVER_ST7735
+                depends on BSP_DISPLAY_INTERFACE_SPI
+                bool "ST7735 128x160 SPI Display - neu"
         endchoice
         
         menu "Rotation"
@@ -696,6 +699,7 @@ menu "Board Support Package (generic)"
             int 
             prompt "Display width"
             default 320
+            default 160 if BSP_DISPLAY_DRIVER_ST7735   # ST7735 meist 160px Breite
             help
                 The width in pixels of the display.
             
@@ -704,6 +708,7 @@ menu "Board Support Package (generic)"
             int 
             prompt "Display height"
             default 240
+            default 128 if BSP_DISPLAY_DRIVER_ST7735   # ST7735 übliches 128px hoch (bei 128x160)
             help
                 The height in pixels of the display.
 
