@@ -15,6 +15,7 @@ dependencies:
   esp_lcd_touch_ft5x06:   "^1"
   esp_lcd_ili9341:  "^1"
   esp_lcd_gc9a01:   "^1"
+  esp_lcd_st7735: "^1"
 
   button:
     version: ">=2.5,<4.0"
