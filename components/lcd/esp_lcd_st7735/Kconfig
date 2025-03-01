@@ -1,0 +1,10 @@
+menu "ESP LCD ST7735 configuration"
+    depends on BSP_DISPLAY_ENABLED && BSP_DISPLAY_DRIVER_ST7735
+
+config ESP_LCD_ST7735_RGB_ENDIAN
+    bool "Use BGR pixel order"
+    help
+        If enabled, the ST7735 panel will be configured for BGR color order instead of RGB.
+
+# Weitere spezifische Optionen könnten hier definiert werden
+endmenu

@@ -1,0 +1,7 @@
+name: "esp_lcd_st7735"
+targets:
+  - esp32s3
+description: ESP LCD ST7735 driver
+version: "1.0.0"
+dependencies:
+  idf: ">=4.4"
