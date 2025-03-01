@@ -532,6 +532,9 @@ esp_err_t bsp_display_new(const bsp_display_config_t *config, esp_lcd_panel_hand
 #if CONFIG_BSP_DISPLAY_DRIVER_ST7789
     ESP_GOTO_ON_ERROR(esp_lcd_new_panel_st7789(*ret_io, &panel_config, ret_panel), err, TAG, "New panel failed");
     ESP_LOGI(TAG, "Initialize LCD: ST7789");
+#elif CONFIG_BSP_DISPLAY_DRIVER_ST7735
+    ESP_GOTO_ON_ERROR(esp_lcd_new_panel_st7735(*ret_io, &panel_config, ret_panel), err, TAG, "New panel failed");
+    ESP_LOGI(TAG, "Initialize LCD: ST7735");
 #elif CONFIG_BSP_DISPLAY_DRIVER_ILI9341
     ESP_GOTO_ON_ERROR(esp_lcd_new_panel_ili9341(*ret_io, &panel_config, ret_panel), err, TAG, "New panel failed");
     ESP_LOGI(TAG, "Initialize LCD: ILI9341");
