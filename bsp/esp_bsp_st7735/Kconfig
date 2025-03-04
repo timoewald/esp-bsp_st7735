@@ -621,6 +621,9 @@ menu "Board Support Package (generic)"
             config BSP_DISPLAY_DRIVER_GC9A01
                 depends on BSP_DISPLAY_INTERFACE_SPI
                 bool "GC9A01"
+            config BSP_DISPLAY_DRIVER_ST7735
+                depends on BSP_DISPLAY_INTERFACE_SPI
+                bool "ST7735"
         endchoice
         
         menu "Rotation"

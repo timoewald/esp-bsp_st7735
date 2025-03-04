@@ -25,6 +25,8 @@
 #include "esp_lcd_ili9341.h"
 #elif CONFIG_BSP_DISPLAY_DRIVER_GC9A01
 #include "esp_lcd_gc9a01.h"
+#elif CONFIG_BSP_DISPLAY_DRIVER_ST7735
+#include "esp_lcd_st7735.h"
 #endif
 
 #endif
@@ -538,6 +540,9 @@ esp_err_t bsp_display_new(const bsp_display_config_t *config, esp_lcd_panel_hand
 #elif CONFIG_BSP_DISPLAY_DRIVER_GC9A01
     ESP_GOTO_ON_ERROR(esp_lcd_new_panel_gc9a01(*ret_io, &panel_config, ret_panel), err, TAG, "New panel failed");
     ESP_LOGI(TAG, "Initialize LCD: GC9A01");
+#elif CONFIG_BSP_DISPLAY_DRIVER_ST7735
+    ESP_GOTO_ON_ERROR(esp_lcd_new_panel_st7735(*ret_io, &panel_config, ret_panel), err, TAG, "New panel failed");
+    ESP_LOGI(TAG, "Initialize LCD: ST7735");
 #endif
     esp_lcd_panel_reset(*ret_panel);
     esp_lcd_panel_init(*ret_panel);
