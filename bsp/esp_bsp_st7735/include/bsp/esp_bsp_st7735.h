@@ -15,8 +15,6 @@
 #include "driver/gpio.h"
 #include "driver/i2c_master.h"
 #include "driver/sdmmc_host.h"
-#include "iot_button.h"
-#include "led_indicator.h"
 
 #if CONFIG_BSP_DISPLAY_ENABLED
 #include "bsp/display.h"
@@ -335,69 +333,7 @@ void bsp_display_unlock(void);
  */
 void bsp_display_rotate(lv_display_t *disp, lv_disp_rotation_t rotation);
 #endif //CONFIG_BSP_DISPLAY_ENABLED
-/**************************************************************************************************
- *
- * Button
- *
- **************************************************************************************************/
 
-/**
- * @brief Initialize all buttons
- *
- * Returned button handlers must be used with espressif/button component API
- *
- * @note For LCD panel button which is defined as BSP_BUTTON_MAIN, bsp_display_start should
- *       be called before call this function.
- *
- * @param[out] btn_array      Output button array
- * @param[out] btn_cnt        Number of button handlers saved to btn_array, can be NULL
- * @param[in]  btn_array_size Size of output button array. Must be at least BSP_BUTTON_NUM
- * @return
- *     - ESP_OK               All buttons initialized
- *     - ESP_ERR_INVALID_ARG  btn_array is too small or NULL
- *     - ESP_FAIL             Underlaying iot_button_create failed
- */
-esp_err_t bsp_iot_button_create(button_handle_t btn_array[], int *btn_cnt, int btn_array_size);
-
-/**************************************************************************************************
- *
- * LEDs
- *
- **************************************************************************************************/
-
-/**
- * @brief Initialize all LEDs
- *
- * @param[out] led_array      Output LED array
- * @param[out] led_cnt        Number of LED handlers saved to led_array, can be NULL
- * @param[in]  led_array_size Size of output LED array. Must be at least BSP_LED_NUM
- * @return
- *     - ESP_OK Success
- *     - ESP_ERR_INVALID_ARG Parameter error
- */
-esp_err_t bsp_led_indicator_create(led_indicator_handle_t led_array[], int *led_cnt, int led_array_size);
-
-/**
- * @brief Turn LED on/off
- *
- * @param handle led handle
- * @param on Switch LED on/off
- * @return
- *     - ESP_OK Success
- *     - ESP_ERR_INVALID_ARG Parameter error
- */
-esp_err_t bsp_led_set(led_indicator_handle_t handle, const bool on);
-
-/**
- * @brief Set LED temperature
- *
- * @param handle led handle
- * @param temperature Color temperature of LED
- * @return
- *     - ESP_OK Success
- *     - ESP_ERR_INVALID_ARG Parameter error
- */
-esp_err_t bsp_led_set_temperature(led_indicator_handle_t handle, const uint16_t temperature);
 
 #ifdef __cplusplus
 }

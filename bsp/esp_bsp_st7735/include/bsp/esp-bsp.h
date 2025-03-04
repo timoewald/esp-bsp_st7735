@@ -5,4 +5,4 @@
  */
 
 #pragma once
-#include "bsp/esp_bsp_generic.h"
+#include "bsp/esp_bsp_st7735.h"
