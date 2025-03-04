@@ -1,0 +1,16 @@
+
+version: "2.0.1"
+description: Generic Board Support Package (BSP) - COPY for esp32s3 with st7735
+url: https://github.com/espressif/esp-bsp/tree/master/bsp/esp_bsp_generic
+
+tags:
+  - bsp
+
+dependencies:
+  idf: ">=5.2"
+  teriyakigod/esp_lcd_st7735: "^0.0.1"
+
+  espressif/esp_lvgl_port:
+    version: "^2"
+    public: true
+    override_path: "../../components/esp_lvgl_port"
