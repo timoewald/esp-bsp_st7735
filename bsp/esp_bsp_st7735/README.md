@@ -225,7 +225,7 @@ Example code:
 |   DISPLAY   |:heavy_check_mark:|       [espressif/esp_lcd_gc9a01](https://components.espressif.com/components/espressif/esp_lcd_gc9a01)       |    ^1    |
 |  LVGL_PORT  |:heavy_check_mark:|        [espressif/esp_lvgl_port](https://components.espressif.com/components/espressif/esp_lvgl_port)        |    ^2    |
 |    TOUCH    |:heavy_check_mark:|[espressif/esp_lcd_touch_cst816s](https://components.espressif.com/components/espressif/esp_lcd_touch_cst816s)|    ^1    |
-|   BUTTONS   |:heavy_check_mark:|               [espressif/button](https://components.espressif.com/components/espressif/button)               |>=2.5,<4.0|
+|   BUTTONS   |:heavy_check_mark:|               [espressif/button](https://components.espressif.com/components/espressif/button)               |    ^4    |
 |     LEDS    |:heavy_check_mark:|                                                                                                              |          |
 |    AUDIO    |        :x:       |                                                                                                              |          |
 |AUDIO_SPEAKER|        :x:       |                                                                                                              |          |
