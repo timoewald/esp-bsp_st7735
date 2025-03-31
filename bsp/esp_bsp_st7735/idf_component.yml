@@ -10,6 +10,14 @@ dependencies:
   idf: ">=5.2"
   teriyakigod/esp_lcd_st7735: "^0.0.1"
 
+  button:
+    version: ">=2.5,<4.0"
+    public: true
+
+  led_indicator:
+    version: "^0.9"
+    public: true
+
   espressif/esp_lvgl_port:
     version: "^2"
     public: true
