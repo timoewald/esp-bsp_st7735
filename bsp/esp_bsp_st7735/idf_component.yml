@@ -11,7 +11,7 @@ dependencies:
   teriyakigod/esp_lcd_st7735: "^0.0.1"
 
   button:
-    version: ">=2.5,<4.0"
+    version: "^4"
     public: true
 
   led_indicator:
